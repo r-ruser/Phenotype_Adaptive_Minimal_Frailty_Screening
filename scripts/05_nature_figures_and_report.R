@@ -70,38 +70,98 @@ lca <- readRDS(file.path(workspace_dir, "lca_results.rds"))
 irt <- readRDS(file.path(workspace_dir, "irt_dif_results.rds"))
 ana <- readRDS(file.path(workspace_dir, "analysis_results.rds"))
 d <- readRDS(file.path(workspace_dir, "eligible_with_phenotypes.rds"))
-flow <- read.csv(file.path(output_dir, "RECOVERED_SAMPLE_FLOW.csv"), stringsAsFactors = FALSE)
+flow_raw <- read.csv(file.path(output_dir, "RECOVERED_SAMPLE_FLOW.csv"), stringsAsFactors = FALSE)
 
-# Figure 1: study architecture and recovered sample.
-flow$stage <- factor(flow$stage, levels = c("Same-wave records", "Eligible age 65+ with chronic disease",
-                                            "Complete five-item bank", "Follow-up FI available"))
-p_flow <- ggplot(flow, aes(stage, N, fill = cohort)) +
-  geom_col(position = position_dodge2(width = 0.78, preserve = "single"), width = 0.72, colour = "white", linewidth = 0.15) +
-  scale_fill_manual(values = pheno_cols[seq_along(unique(flow$cohort))]) +
-  scale_y_continuous(labels = label_number(big.mark = ","), expand = expansion(mult = c(0, 0.08))) +
-  labs(x = NULL, y = "Participants", title = "Recovered same-wave analysis population") +
-  theme(axis.text.x = element_text(angle = 28, hjust = 1), legend.position = "top", legend.title = element_blank())
+# Figure 1: cohort-specific inclusion/exclusion flows. Outcome-specific samples
+# branch from the same complete five-item bank and are therefore displayed
+# together rather than as a false sequential attrition chain.
+cohort_order <- c("CHARLS", "HRS", "ELSA", "SHARE", "MHAS")
+stage_wide <- flow_raw |>
+  filter(stage %in% c("Same-wave records", "Eligible age 65+ with chronic disease",
+                      "Complete five-item bank")) |>
+  select(cohort, stage, N) |>
+  pivot_wider(names_from=stage, values_from=N)
+names(stage_wide)[names(stage_wide)=="Same-wave records"] <- "same_wave_n"
+names(stage_wide)[names(stage_wide)=="Eligible age 65+ with chronic disease"] <- "eligible_n"
+names(stage_wide)[names(stage_wide)=="Complete five-item bank"] <- "complete_bank_n"
+validation_n <- ana$performance |>
+  filter(held_out_cohort != "Pooled LOCO", model == "Universal 4-item",
+         outcome %in% c("Concurrent FI >=0.25", "Follow-up FI >=0.25")) |>
+  select(cohort=held_out_cohort, outcome, N) |>
+  pivot_wider(names_from=outcome, values_from=N)
+names(validation_n)[names(validation_n)=="Concurrent FI >=0.25"] <- "concurrent_n"
+names(validation_n)[names(validation_n)=="Follow-up FI >=0.25"] <- "followup_n"
+flow <- left_join(stage_wide, validation_n, by="cohort") |>
+  mutate(
+    cohort=factor(cohort,levels=cohort_order),
+    excluded_eligibility=as.integer(same_wave_n-eligible_n),
+    excluded_incomplete_bank=as.integer(eligible_n-complete_bank_n),
+    missing_concurrent=as.integer(complete_bank_n-concurrent_n),
+    missing_followup=as.integer(complete_bank_n-followup_n)
+  ) |>
+  arrange(cohort)
 
-nodes <- data.frame(
-  x = c(1,2.2,3.4,4.6,5.8), y = c(1,1,1,1,1),
-  label = c("Clinical + social\ncontext", "Latent\nphenotype", "Phenotype-adaptive\n4–5 questions",
-            "Frailty / disability\nvalidation", "Paper 1 treatment-\nbenefit relevance"),
-  fill = c(pal["neutral_light"], pal["violet"], pal["blue_light"], pal["teal"], pal["rose"])
+cohort_fill <- c(
+  CHARLS="#F8E7B6", HRS="#F4CDD4", ELSA="#C9ECEB",
+  SHARE="#F5DDC8", MHAS="#CDEAF1"
 )
-p_scheme <- ggplot(nodes, aes(x, y)) +
-  geom_segment(data = data.frame(x=nodes$x[-nrow(nodes)], xend=nodes$x[-1], y=1, yend=1),
-               aes(x=x, xend=xend, y=y, yend=yend), inherit.aes=FALSE,
-               arrow=arrow(length=unit(2.2,"mm"), type="closed"), linewidth=0.45, colour="#555A66") +
-  geom_label(aes(label=label, fill=fill), size=2.45, family="Arial", linewidth=0.25,
-             label.padding=unit(2.5,"mm"), lineheight=0.95, colour="#20222A") +
-  scale_fill_identity() + coord_cartesian(xlim=c(0.45,6.35), ylim=c(0.55,1.45), clip="off") +
-  theme_void(base_family="Arial") + ggtitle("Phenotype-adaptive screening pathway") +
-  theme(plot.title=element_text(size=7.6, face="bold"), plot.margin=margin(4,8,4,8))
+fmt_n <- function(x) format(as.integer(x),big.mark=",",scientific=FALSE,trim=TRUE)
+make_flow_panel <- function(z) {
+  fill_col <- unname(cohort_fill[as.character(z$cohort)])
+  main_boxes <- data.frame(
+    xmin=0.45,xmax=5.65,
+    ymin=c(7.05,5.35,3.65,1.35),ymax=c(7.85,6.15,4.45,2.75),
+    label=c(
+      paste0(fmt_n(z$same_wave_n)," same-wave participants in ",as.character(z$cohort)),
+      paste0(fmt_n(z$eligible_n)," participants eligible\n(age ≥65 years and ≥1 chronic disease)"),
+      paste0(fmt_n(z$complete_bank_n)," participants with complete\nfive-item screening bank"),
+      paste0("Validation samples\nConcurrent FI: ",fmt_n(z$concurrent_n),
+             "    Follow-up FI: ",fmt_n(z$followup_n))
+    )
+  )
+  exclusion_boxes <- data.frame(
+    xmin=6.15,xmax=9.8,
+    ymin=c(6.38,4.68,2.88),ymax=c(7.12,5.42,3.58),
+    label=c(
+      paste0("Eligibility criteria not met: ",fmt_n(z$excluded_eligibility)),
+      paste0("Incomplete screening bank: ",fmt_n(z$excluded_incomplete_bank)),
+      paste0("Concurrent FI unavailable: ",fmt_n(z$missing_concurrent),
+             "\nFollow-up FI unavailable: ",fmt_n(z$missing_followup))
+    )
+  )
+  vertical_arrows <- data.frame(
+    x=3.05,xend=3.05,
+    y=c(7.05,5.35,3.65),yend=c(6.15,4.45,2.75)
+  )
+  branch_arrows <- data.frame(
+    x=3.05,xend=6.15,y=c(6.75,5.05,3.23),yend=c(6.75,5.05,3.23)
+  )
+  ggplot() +
+    geom_segment(data=vertical_arrows,aes(x=x,xend=xend,y=y,yend=yend),
+                 linewidth=0.28,colour="#20222A",
+                 arrow=grid::arrow(length=grid::unit(1.4,"mm"),type="closed")) +
+    geom_segment(data=branch_arrows,aes(x=x,xend=xend,y=y,yend=yend),
+                 linewidth=0.28,colour="#20222A",
+                 arrow=grid::arrow(length=grid::unit(1.4,"mm"),type="closed")) +
+    geom_rect(data=main_boxes,aes(xmin=xmin,xmax=xmax,ymin=ymin,ymax=ymax),
+              fill=fill_col,colour="#777777",linewidth=0.25) +
+    geom_rect(data=exclusion_boxes,aes(xmin=xmin,xmax=xmax,ymin=ymin,ymax=ymax),
+              fill=scales::alpha(fill_col,0.74),colour="#8A8A8A",linewidth=0.22) +
+    geom_text(data=main_boxes,aes(x=(xmin+xmax)/2,y=(ymin+ymax)/2,label=label),
+              family="Arial",size=2.45,lineheight=0.94,colour="#20222A") +
+    geom_text(data=exclusion_boxes,aes(x=xmin+0.16,y=(ymin+ymax)/2,label=label),
+              family="Arial",size=2.25,lineheight=0.93,hjust=0,fontface="italic",colour="#20222A") +
+    coord_cartesian(xlim=c(0.25,10),ylim=c(1.15,8.05),clip="off",expand=FALSE) +
+    theme_void(base_family="Arial") +
+    theme(plot.margin=margin(1.5,3,1.5,3))
+}
 
-fig1 <- p_scheme / p_flow + plot_layout(heights=c(0.75,1.45)) +
-  plot_annotation(tag_levels="a") & theme(plot.tag=element_text(size=8,face="bold"))
-write.csv(flow, file.path(source_dir, "Figure1_sample_flow.csv"), row.names=FALSE)
-save_pub(fig1, file.path(figure_dir, "Figure1_study_design"), height_mm=128)
+flow_panels <- lapply(seq_len(nrow(flow)),function(i) make_flow_panel(flow[i,,drop=FALSE]))
+fig1 <- wrap_plots(flow_panels,ncol=1) +
+  plot_annotation(tag_levels="a") &
+  theme(plot.tag=element_text(size=8,face="bold",family="Arial"))
+write.csv(flow,file.path(source_dir,"Figure1_sample_flow.csv"),row.names=FALSE)
+save_pub(fig1,file.path(figure_dir,"Figure1_study_design"),width_mm=183,height_mm=235)
 
 # Figure 2: phenotype landscape and transportability.
 prob <- data.frame(phenotype=lca$class_names, lca$primary_profile, check.names=FALSE) |>
