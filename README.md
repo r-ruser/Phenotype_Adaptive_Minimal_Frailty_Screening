@@ -1,3 +1,5 @@
+<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/bd0fb968-ca7d-4e8e-bd94-b434f7f38441" />
+
 # Phenotype-Adaptive Minimal Frailty Screening
 
 Reproducible R workflow for recovering harmonized same-wave data, discovering clinical-social phenotypes, deriving phenotype-adaptive 4/5-item frailty screeners, performing leave-one-cohort-out validation, and exporting Nature-style figures.
