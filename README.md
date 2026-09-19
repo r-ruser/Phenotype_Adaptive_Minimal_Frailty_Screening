@@ -1,4 +1,5 @@
-<img width="1672" height="941" alt="image" src="https://github.com/user-attachments/assets/bd0fb968-ca7d-4e8e-bd94-b434f7f38441" />
+<img width="1671" height="941" alt="ChatGPT Image 2026年9月19日 13_46_01" src="https://github.com/user-attachments/assets/b92b43bc-79df-4414-9cf4-b80a5f520793" />
+
 
 # Phenotype-Adaptive Minimal Frailty Screening
 
