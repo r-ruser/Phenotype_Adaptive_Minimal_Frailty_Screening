@@ -102,8 +102,8 @@ flow <- left_join(stage_wide, validation_n, by="cohort") |>
   arrange(cohort)
 
 cohort_fill <- c(
-  CHARLS="#F8E7B6", HRS="#F4CDD4", ELSA="#C9ECEB",
-  SHARE="#F5DDC8", MHAS="#CDEAF1"
+  CHARLS="#C9B79C", HRS="#C9A7A7", ELSA="#AABCB2",
+  SHARE="#B7A9C0", MHAS="#A7B7C7"
 )
 fmt_n <- function(x) format(as.integer(x),big.mark=",",scientific=FALSE,trim=TRUE)
 make_flow_panel <- function(z) {
