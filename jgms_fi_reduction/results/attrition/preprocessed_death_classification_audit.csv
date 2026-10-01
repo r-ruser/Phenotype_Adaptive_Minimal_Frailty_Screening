@@ -1,0 +1,6 @@
+"cohort","labels_death_codes","labels_alive_codes","preprocessed_death_mismatch"
+"HRS","2;3;5;6","1;4",0
+"ELSA","3;5;6","1;4",0
+"SHARE","5;6","1;4",0
+"CHARLS","5;6","1;4",0
+"MHAS","5;6","1;4",0

@@ -1,0 +1,6 @@
+"cohort","UID_alignment","training_heldout_separation","recomputed_SHAP_score","all_random_scores_available","random_count"
+"HRS","PASS","PASS","PASS","PASS",1000
+"ELSA","PASS","PASS","PASS","PASS",1000
+"SHARE","PASS","PASS","PASS","PASS",1000
+"CHARLS","PASS","PASS","PASS","PASS",1000
+"MHAS","PASS","PASS","PASS","PASS",1000

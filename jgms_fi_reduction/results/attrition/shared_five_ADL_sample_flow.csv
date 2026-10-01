@@ -1,0 +1,6 @@
+"cohort","baseline_complete_FI_n","common_score_n","baseline_five_task_observed_n","baseline_five_task_free_n","baseline_free_common_score_n","followup_task_positive_n","followup_all_five_negative_n","followup_task_status_uncertain_n","analysis_n","events","primary_cohort_specific_ADL_analysis_n","primary_ADL_events"
+"HRS",8349,8075,8314,6531,6354,587,4835,932,5422,587,5424,592
+"ELSA",4197,4196,4197,3286,3285,355,1826,1104,2181,355,2181,355
+"SHARE",12560,12552,12560,10173,10170,833,4297,5040,5130,833,5130,833
+"CHARLS",4021,3946,4011,2707,2661,464,1824,373,2288,464,2288,464
+"MHAS",5827,5433,5809,4427,4148,763,2704,681,3467,763,3480,765

@@ -1,0 +1,6 @@
+"cohort","baseline_wave","followup_wave","baseline_median_year","baseline_min_year","baseline_max_year","followup_median_year","followup_min_year","followup_max_year","interval_median_years"
+"HRS",14,15,2018,2018,2019,2020,2020,2021,2
+"ELSA",9,10,2018,2018,2019,2022,2021,2023,3.5
+"SHARE",2,4,2007,2006,2010,2011,2011,2012,4.25
+"CHARLS",3,4,2015,2015,2016,2018,2018,2018,3
+"MHAS",5,6,2018,2018,2019,2021,2021,2022,3.08333333333326

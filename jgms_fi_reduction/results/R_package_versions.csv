@@ -1,0 +1,6 @@
+"package","installed_version","role"
+"haven","2.5.5","source import"
+"dplyr","1.2.1","same-wave recovery"
+"pROC","1.19.0.1","AUROC/latent-code dependency"
+"xgboost","1.7.11.1","training-only SHAP ranking"
+"pdftools","3.8.0","local codebook audit"

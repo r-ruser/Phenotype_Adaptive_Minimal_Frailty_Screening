@@ -1,0 +1,19 @@
+"cohort","source","variable","status_code","status_label","n"
+"HRS","HRS_USA/randhrs1992_2022v1.dta","r15iwstat",1,"1.resp,alive",6772
+"HRS","HRS_USA/randhrs1992_2022v1.dta","r15iwstat",4,"4.nr,alive",757
+"HRS","HRS_USA/randhrs1992_2022v1.dta","r15iwstat",5,"5.nr,died this wv",820
+"ELSA","ELSA_UK/UKDA-5050-stata/stata/stata13_se/gh_elsa_h.dta","r10iwstat",1,"1.resp, alive",2651
+"ELSA","ELSA_UK/UKDA-5050-stata/stata/stata13_se/gh_elsa_h.dta","r10iwstat",9,"9.nr, dk if alive or died",1546
+"SHARE","SHARE_Europe/GH_SHARE_g.dta","r4iwstat",1,"1.resp, alive",5979
+"SHARE","SHARE_Europe/GH_SHARE_g.dta","r4iwstat",4,"4.nr, alive",2505
+"SHARE","SHARE_Europe/GH_SHARE_g.dta","r4iwstat",5,"5.nr, died this wv",859
+"SHARE","SHARE_Europe/GH_SHARE_g.dta","r4iwstat",6,"6.nr, died prev wv",719
+"SHARE","SHARE_Europe/GH_SHARE_g.dta","r4iwstat",9,"9.nr, dk if alive or died",1161
+"SHARE","SHARE_Europe/GH_SHARE_g.dta","r4iwstat",10,"10.nr, cntry not in wv",1337
+"CHARLS","CHARLS_China/H_CHARLS_D_Data.dta","r4iwstat",1,"1.resp, alive",3411
+"CHARLS","CHARLS_China/H_CHARLS_D_Data.dta","r4iwstat",5,"5.nr, died this wv",350
+"CHARLS","CHARLS_China/H_CHARLS_D_Data.dta","r4iwstat",9,"9.nr, dk if alive or died",260
+"MHAS","MHAS_Mexico/H_MHAS_d.dta","r6iwstat",1,"1.Resp, alive",4726
+"MHAS","MHAS_Mexico/H_MHAS_d.dta","r6iwstat",4,"4.NR, alive",154
+"MHAS","MHAS_Mexico/H_MHAS_d.dta","r6iwstat",5,"5.NR, died this wave",876
+"MHAS","MHAS_Mexico/H_MHAS_d.dta","r6iwstat",9,"9.NR, dk if alive or died",71

@@ -1,0 +1,7 @@
+"cohort","source_basename","dataset_label","source_path"
+"HRS","randhrs1992_2022v1.dta","","HRS_USA/randhrs1992_2022v1.dta"
+"HRS","H_HRS_d.dta","Harmonized HRS Ver.D","HRS_USA/H_HRS_d.dta"
+"ELSA","gh_elsa_h.dta","Gateway Harmonized ELSA Ver.H","ELSA_UK/UKDA-5050-stata/stata/stata13_se/gh_elsa_h.dta"
+"SHARE","GH_SHARE_g.dta","Gateway Harmonized SHARE Ver.G","SHARE_Europe/GH_SHARE_g.dta"
+"CHARLS","H_CHARLS_D_Data.dta","Harmonized CHARLS Ver.D","CHARLS_China/H_CHARLS_D_Data.dta"
+"MHAS","H_MHAS_d.dta","Harmonized MHAS Ver.D","MHAS_Mexico/H_MHAS_d.dta"

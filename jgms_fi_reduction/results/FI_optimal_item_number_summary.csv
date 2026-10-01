@@ -1,0 +1,7 @@
+"AUROC_fraction_of_max","prospective_rule","min_k_4_of_5","min_k_5_of_5"
+0.9,"future_FI",5,6
+0.9,"future_FI_and_ADL",5,11
+0.95,"future_FI",5,6
+0.95,"future_FI_and_ADL",5,11
+0.975,"future_FI",6,6
+0.975,"future_FI_and_ADL",6,11

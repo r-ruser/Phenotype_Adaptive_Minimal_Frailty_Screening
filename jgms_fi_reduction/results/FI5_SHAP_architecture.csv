@@ -1,0 +1,6 @@
+"held_out","phenotypes","training_n","heldout_n","raw_distinct_sets","forced_distinct_sets","unique_adjusted","universal_items"
+"HRS",6,26605,8349,2,6,4,"q_lifta+q_climsa+q_shlt+q_chaira+q_stoopa"
+"ELSA",6,30757,4197,3,6,3,"q_lifta+q_climsa+q_chaira+q_shlt+q_stoopa"
+"SHARE",5,22394,12560,2,5,4,"q_lifta+q_climsa+q_shlt+q_chaira+q_stoopa"
+"CHARLS",6,30933,4021,2,6,4,"q_lifta+q_climsa+q_shlt+q_chaira+q_stoopa"
+"MHAS",6,29127,5827,2,6,4,"q_lifta+q_climsa+q_chaira+q_shlt+q_stoopa"

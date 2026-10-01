@@ -1,0 +1,6 @@
+"cohort","raw_universe_n","baseline_age65_chronic6_n","baseline_age65_chronic7_n","baseline_age65_chronic6_social_n","inherited_eligible_n","inherited_not_matched","inherited_raw_age_under65","inherited_age_disagreement","inherited_chronic_absent","inherited_social_absent","raw_fixed_eligible_missing_inherited","inherited_not_raw_fixed_eligible","fullFI_n","fullFI_age_under65","max_disease_disagreement","baseline_ADL_disagreement","followup_ADL_disagreement","baseline_ADL_missing_disagreement","followup_ADL_missing_disagreement"
+"HRS",45234,8426,8449,8426,8426,0,0,0,0,0,0,0,8349,0,0,0,0,0,0
+"ELSA",21679,4470,4516,4470,4470,0,0,0,0,0,0,0,4197,0,0,0,0,0,0
+"SHARE",158764,12794,13046,12794,12794,0,0,0,0,0,0,0,12560,0,0,0,0,0,0
+"CHARLS",25586,4473,4672,4473,4473,0,0,0,0,0,0,0,4021,0,0,0,0,0,0
+"MHAS",27159,6607,6607,6607,6607,0,0,0,0,0,0,0,5827,0,0,0,0,0,0

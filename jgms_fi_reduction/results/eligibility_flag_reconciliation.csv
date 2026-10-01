@@ -1,0 +1,6 @@
+"cohort","all_harmonized_n","age65_chronic_n","interviewed_age65_chronic_n","age65_chronic_social_n","eligible_n","eligible_has_social_false","eligible_no_baseline_interview","selected_matches_eligible_flag","flag_missing_in_eligible"
+"HRS",45235,8449,8449,8449,8426,0,0,8426,0
+"ELSA",21679,4516,4516,4516,4470,0,0,4470,0
+"SHARE",158764,13046,13046,13046,12794,0,0,12794,0
+"CHARLS",25586,4672,4672,4672,4473,0,0,4473,0
+"MHAS",27159,6607,6607,6607,6607,0,0,6607,0

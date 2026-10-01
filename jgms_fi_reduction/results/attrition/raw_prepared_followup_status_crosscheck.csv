@@ -1,0 +1,6 @@
+"cohort","source","variable","baseline_complete_FI_n","unmatched_ID_n","raw_status_missing_n","prepared_status_missing_n","raw_prepared_mismatch_n"
+"HRS","HRS_USA/randhrs1992_2022v1.dta","r15iwstat",8349,0,0,0,0
+"ELSA","ELSA_UK/UKDA-5050-stata/stata/stata13_se/gh_elsa_h.dta","r10iwstat",4197,0,0,0,0
+"SHARE","SHARE_Europe/GH_SHARE_g.dta","r4iwstat",12560,0,0,0,0
+"CHARLS","CHARLS_China/H_CHARLS_D_Data.dta","r4iwstat",4021,0,0,0,0
+"MHAS","MHAS_Mexico/H_MHAS_d.dta","r6iwstat",5827,0,0,0,0

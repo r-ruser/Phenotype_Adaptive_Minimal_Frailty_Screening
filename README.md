@@ -1,3 +1,6 @@
+## Five-cohort FI item reduction — manuscript revision, 2026-10-01
+
+The current measurement study and reproducibility package are in [jgms_fi_reduction](jgms_fi_reduction/README.md): full deficit coding, training/evaluation code, continuous agreement, correlation/random benchmarks, follow-up availability weighting, and shared-task ADL sensitivity. The six-item form is an exploratory candidate length. Aggregate results and validation records are included; licensed participant records belong to the private runtime directory.
 <img width="1671" height="941" alt="ChatGPT Image 2026年9月19日 13_46_01" src="https://github.com/user-attachments/assets/b92b43bc-79df-4414-9cf4-b80a5f520793" />
 
 
@@ -40,3 +43,4 @@ parent analysis directory. Manuscript-facing outputs include
 `Paper2_Analysis_Summary.md`, protocol-aligned `output/TABLE1_*.csv` through
 `output/TABLE6*.csv`, and the complete `output/nature_figures/` bundle. Large
 data and result files are intentionally excluded from Git.
+

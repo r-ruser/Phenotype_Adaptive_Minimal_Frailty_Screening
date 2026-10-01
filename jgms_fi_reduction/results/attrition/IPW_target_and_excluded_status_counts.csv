@@ -1,0 +1,6 @@
+"cohort","common_n","known_alive_common_n","country_zero_observation_excluded_n","known_alive_target_n","observed_followup_FI_n","unobserved_followup_FI_n","recorded_death_excluded_n","unknown_status_excluded_n","country_wave_absence_excluded_n"
+"HRS",8075,7317,0,7317,6510,807,758,0,0
+"ELSA",4196,2650,0,2650,2581,69,0,1546,0
+"SHARE",12552,8480,893,7587,5851,1736,1577,1161,1334
+"CHARLS",3946,3344,0,3344,2930,414,346,256,0
+"MHAS",5433,4557,0,4557,3989,568,808,68,0

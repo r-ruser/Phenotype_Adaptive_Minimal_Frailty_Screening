@@ -1,0 +1,52 @@
+"cohort","stage","status_group","n"
+"HRS","Retained for follow-up FI","Respondent alive",6510
+"HRS","Retained for follow-up FI","Recorded death",0
+"HRS","Retained for follow-up FI","Nonrespondent alive",0
+"HRS","Follow-up FI unavailable","Respondent alive",77
+"HRS","Follow-up FI unavailable","Recorded death",758
+"HRS","Follow-up FI unavailable","Nonrespondent alive",730
+"HRS","Common-score requirement","Respondent alive",185
+"HRS","Common-score requirement","Recorded death",62
+"HRS","Common-score requirement","Nonrespondent alive",27
+"ELSA","Follow-up FI unavailable","Unknown vital status",1546
+"ELSA","Follow-up FI unavailable","Respondent alive",69
+"ELSA","Retained for follow-up FI","Unknown vital status",0
+"ELSA","Retained for follow-up FI","Respondent alive",2581
+"ELSA","Common-score requirement","Unknown vital status",0
+"ELSA","Common-score requirement","Respondent alive",1
+"SHARE","Follow-up FI unavailable","Recorded death",1577
+"SHARE","Follow-up FI unavailable","Respondent alive",127
+"SHARE","Follow-up FI unavailable","Unknown vital status",1161
+"SHARE","Follow-up FI unavailable","Nonrespondent alive",2502
+"SHARE","Follow-up FI unavailable","Country absent from wave",1334
+"SHARE","Retained for follow-up FI","Recorded death",0
+"SHARE","Retained for follow-up FI","Respondent alive",5851
+"SHARE","Retained for follow-up FI","Unknown vital status",0
+"SHARE","Retained for follow-up FI","Nonrespondent alive",0
+"SHARE","Retained for follow-up FI","Country absent from wave",0
+"SHARE","Common-score requirement","Recorded death",1
+"SHARE","Common-score requirement","Respondent alive",1
+"SHARE","Common-score requirement","Unknown vital status",0
+"SHARE","Common-score requirement","Nonrespondent alive",3
+"SHARE","Common-score requirement","Country absent from wave",3
+"CHARLS","Retained for follow-up FI","Respondent alive",2930
+"CHARLS","Retained for follow-up FI","Recorded death",0
+"CHARLS","Retained for follow-up FI","Unknown vital status",0
+"CHARLS","Follow-up FI unavailable","Respondent alive",414
+"CHARLS","Follow-up FI unavailable","Recorded death",346
+"CHARLS","Follow-up FI unavailable","Unknown vital status",256
+"CHARLS","Common-score requirement","Respondent alive",67
+"CHARLS","Common-score requirement","Recorded death",4
+"CHARLS","Common-score requirement","Unknown vital status",4
+"MHAS","Retained for follow-up FI","Respondent alive",3989
+"MHAS","Retained for follow-up FI","Recorded death",0
+"MHAS","Retained for follow-up FI","Nonrespondent alive",0
+"MHAS","Retained for follow-up FI","Unknown vital status",0
+"MHAS","Follow-up FI unavailable","Respondent alive",424
+"MHAS","Follow-up FI unavailable","Recorded death",808
+"MHAS","Follow-up FI unavailable","Nonrespondent alive",144
+"MHAS","Follow-up FI unavailable","Unknown vital status",68
+"MHAS","Common-score requirement","Respondent alive",313
+"MHAS","Common-score requirement","Recorded death",68
+"MHAS","Common-score requirement","Nonrespondent alive",10
+"MHAS","Common-score requirement","Unknown vital status",3

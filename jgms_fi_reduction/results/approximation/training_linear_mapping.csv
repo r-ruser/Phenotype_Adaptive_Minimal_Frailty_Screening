@@ -1,0 +1,6 @@
+"cohort","training_n","intercept","slope","training_cohorts","items"
+"HRS",26526,0.0635143979234375,0.476695195842324,"ELSA;SHARE;CHARLS;MHAS","q_lifta;q_climsa;q_shlt;q_chaira;q_stoopa;q_shopa"
+"ELSA",30644,0.0652875530875849,0.487638345341652,"HRS;SHARE;CHARLS;MHAS","q_lifta;q_climsa;q_chaira;q_shlt;q_stoopa;q_shopa"
+"SHARE",22281,0.0673117628458592,0.501750177571775,"HRS;ELSA;CHARLS;MHAS","q_lifta;q_climsa;q_shlt;q_chaira;q_stoopa;q_shopa"
+"CHARLS",30823,0.0637002884975803,0.483141685855465,"HRS;ELSA;SHARE;MHAS","q_lifta;q_climsa;q_shlt;q_chaira;q_stoopa;q_shopa"
+"MHAS",29090,0.0600757918683864,0.473549266487603,"HRS;ELSA;SHARE;CHARLS","q_lifta;q_climsa;q_chaira;q_shlt;q_stoopa;q_shopa"

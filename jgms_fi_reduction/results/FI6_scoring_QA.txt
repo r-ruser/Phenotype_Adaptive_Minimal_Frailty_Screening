@@ -1,0 +1,1 @@
+PASS: all code parses; 0/1/ordinal scoring, 5-of-6 boundary and observed-item denominator checked

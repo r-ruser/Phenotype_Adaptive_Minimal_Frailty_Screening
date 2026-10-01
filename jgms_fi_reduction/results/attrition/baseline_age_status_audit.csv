@@ -1,0 +1,6 @@
+"cohort","n","age_min","age_max","age_lt65","age_missing","baseline_complete_FI","followup_status_missing"
+"HRS",8349,65,104,0,0,8349,0
+"ELSA",4197,65,90,0,0,4197,0
+"SHARE",12560,65,101,0,0,12560,0
+"CHARLS",4021,65,105,0,0,4021,0
+"MHAS",5827,65,102,0,0,5827,0

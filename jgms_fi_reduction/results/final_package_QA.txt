@@ -1,0 +1,8 @@
+PASS: 222 retained FI mappings, 80 candidate mappings, 30 six-item mappings
+PASS: all public analysis R files parse
+PASS: raw recovery and FI/ADL numeric comparisons match all five frozen cohorts
+PASS: true fractional thresholds reproduce all five locked classifications
+PASS: no participant-level RDS or released raw-data files
+PASS: UTF-8 and removed-benchmark screen
+Files audited: 74
+Verification scope: preparation was executed from released source data in memory; full XGBoost refit was supplied as code and existing aggregate results.

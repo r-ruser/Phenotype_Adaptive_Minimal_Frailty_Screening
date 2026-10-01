@@ -1,0 +1,6 @@
+"cohort","eligible_n","eligible_uid_same","age_same","ADL_same","followup_ADL_same","reference_items","fullFI_same","followupFI_same","fullFI_available_n"
+"HRS",8426,TRUE,TRUE,TRUE,TRUE,46,TRUE,TRUE,8349
+"ELSA",4470,TRUE,TRUE,TRUE,TRUE,44,TRUE,TRUE,4197
+"SHARE",12794,TRUE,TRUE,TRUE,TRUE,50,TRUE,TRUE,12560
+"CHARLS",4473,TRUE,TRUE,TRUE,TRUE,39,TRUE,TRUE,4021
+"MHAS",6607,TRUE,TRUE,TRUE,TRUE,43,TRUE,TRUE,5827

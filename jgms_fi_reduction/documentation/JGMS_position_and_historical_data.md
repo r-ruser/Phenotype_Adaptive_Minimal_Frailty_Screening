@@ -1,0 +1,11 @@
+# JGMS positioning and historical-wave rationale
+
+The article's contribution is a cross-cohort measurement-reduction comparison: training-only item ranking, equal-weight length curves, continuous-score approximation, later outcomes, and incremental comparison of universal and phenotype rankings. Six items constitute an exploratory practical candidate. The paper's research-tool focus fits the Research Practice description. The [current JGMS author instructions](https://academic.oup.com/biomedgerontology/pages/General_Instructions_2) list limits of 3,800 words, 250 abstract words, 40 references, and five data elements for Research Practice, with additional elements in supplements. They request a cover-letter rationale for data older than ten years. Research Article remains a possible category when the final framing centers the broader empirical findings.
+
+## Actual historical-wave provenance
+
+The 2018–2019 baselines in HRS, ELSA, and MHAS are accompanied by SHARE baseline fieldwork in 2006–2010 and CHARLS in 2015–2016. The original same-wave backbone chose SHARE wave 2 to preserve a common effort item in an earlier harmonization stage. The current 16-question reduction analysis inherits those fixed waves; later-wave availability of its complete bank is a further empirical question. A cover letter should describe that provenance accurately. The scientific value of the current historical comparison is the behavior of measurement reduction across observed cohort/item distributions and follow-up intervals.
+
+## Cover-letter paragraph
+
+Our study uses fixed, documented harmonized wave pairs to examine the transport of a common questionnaire bank and the consequences of reducing a multideficit frailty index. SHARE baseline interviews occurred in 2006–2010 and CHARLS in 2015–2016; the other three baselines occurred in 2018–2019. These waves form the study's established same-wave analytic backbone and provide the item-level references and longitudinal outcomes needed for the reported comparisons. The scientific contribution concerns measurement behavior across cohorts. We report the actual years, follow-up intervals, source releases, and historical-wave limitations, and identify validation in recent cohorts as the next step for the six-item candidate.

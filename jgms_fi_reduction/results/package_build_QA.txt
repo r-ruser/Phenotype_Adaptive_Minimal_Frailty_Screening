@@ -1,0 +1,5 @@
+# Package build audit
+FI encoded items: 222
+Candidate mappings: 80
+Six-item mappings: 30
+Five held-out folds; 29 total training classes; no individual-level dataset copied.

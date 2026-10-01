@@ -1,0 +1,16 @@
+"cohort","outcome","baseline_n","common_all_k_n","candidate_15_of_16_n","fair_base_n","fair_analysis_n","events","common_all_k_outcome_n","removed_by_candidate_rule"
+"HRS","concurrent",8349,8075,8198,8042,8042,3806,8075,33
+"HRS","followup_frail",8349,8075,8198,8042,6489,3000,6510,21
+"HRS","incident_adl",8349,8075,8198,8042,5411,588,5424,13
+"ELSA","concurrent",4197,4196,4197,4196,4196,1272,4196,0
+"ELSA","followup_frail",4197,4196,4197,4196,2581,884,2581,0
+"ELSA","incident_adl",4197,4196,4197,4196,2181,355,2181,0
+"SHARE","concurrent",12560,12552,12560,12552,12552,4581,12552,0
+"SHARE","followup_frail",12560,12552,12560,12552,5851,2374,5851,0
+"SHARE","incident_adl",12560,12552,12560,12552,5130,833,5130,0
+"CHARLS","concurrent",4021,3946,3999,3936,3936,1943,3946,10
+"CHARLS","followup_frail",4021,3946,3999,3936,2924,1528,2930,6
+"CHARLS","incident_adl",4021,3946,3999,3936,2287,463,2288,1
+"MHAS","concurrent",5827,5433,5669,5400,5400,3381,5433,33
+"MHAS","followup_frail",5827,5433,5669,5400,3973,2516,3989,16
+"MHAS","incident_adl",5827,5433,5669,5400,3463,758,3480,17

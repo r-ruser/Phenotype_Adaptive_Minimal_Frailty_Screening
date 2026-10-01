@@ -1,0 +1,26 @@
+"cohort","task","task_label","source","baseline_variable","followup_variable","source_variable_label","coding","baseline_observed_n","followup_observed_n","baseline_task_positive_n","followup_task_positive_n"
+"HRS","batha","Bathing","HRS_USA/randhrs1992_2022v1.dta","r14batha","r15batha","r14batha:w14 r any diff-bathing, shower","difficulty",8345,6745,885,691
+"HRS","dressa","Dressing","HRS_USA/randhrs1992_2022v1.dta","r14dressa","r15dressa","r14dressa:w14 r any diff-dressing","difficulty",8345,6748,1148,908
+"HRS","eata","Eating","HRS_USA/randhrs1992_2022v1.dta","r14eata","r15eata","r14eata:w14 r any diff-eating","difficulty",8342,6740,441,334
+"HRS","beda","Getting in or out of bed","HRS_USA/randhrs1992_2022v1.dta","r14beda","r15beda","r14beda:w14 r any diff-get in/out bed","difficulty",8339,6743,726,587
+"HRS","toilta","Toileting","HRS_USA/randhrs1992_2022v1.dta","r14toilta","r15toilta","r14toilta:w14 r any diff-using the toilet","difficulty",8338,6737,699,521
+"ELSA","batha","Bathing","ELSA_UK/UKDA-5050-stata/stata/stata13_se/gh_elsa_h.dta","r9batha","r10batha","r9batha:w9 R Some Diff-Bathing, shower","difficulty",4197,2651,439,303
+"ELSA","dressa","Dressing","ELSA_UK/UKDA-5050-stata/stata/stata13_se/gh_elsa_h.dta","r9dressa","r10dressa","r9dressa:w9 R Some Diff-Dressing","difficulty",4197,2651,663,490
+"ELSA","eata","Eating","ELSA_UK/UKDA-5050-stata/stata/stata13_se/gh_elsa_h.dta","r9eata","r10eata","r9eata:w9 R Some Diff-Eating","difficulty",4197,2651,108,86
+"ELSA","beda","Getting in or out of bed","ELSA_UK/UKDA-5050-stata/stata/stata13_se/gh_elsa_h.dta","r9beda","r10beda","r9beda:w9 R Some Diff-Get in/out bed","difficulty",4197,2651,298,203
+"ELSA","toilta","Toileting","ELSA_UK/UKDA-5050-stata/stata/stata13_se/gh_elsa_h.dta","r9toilta","r10toilta","r9toilta:w9 R Some Diff-Using the toilet","difficulty",4197,2651,192,156
+"SHARE","batha","Bathing","SHARE_Europe/GH_SHARE_g.dta","r2batha","r4batha","r2batha:w2 R Some Diff-Bathing, shower","difficulty",12560,5960,1478,858
+"SHARE","dressa","Dressing","SHARE_Europe/GH_SHARE_g.dta","r2dressa","r4dressa","r2dressa:w2 R Some Diff-Dressing","difficulty",12560,5960,1676,939
+"SHARE","eata","Eating","SHARE_Europe/GH_SHARE_g.dta","r2eata","r4eata","r2eata:w2 R Some Diff-Eating","difficulty",12560,5960,404,296
+"SHARE","beda","Getting in or out of bed","SHARE_Europe/GH_SHARE_g.dta","r2beda","r4beda","r2beda:w2 R Some Diff-Get in/out bed","difficulty",12560,5960,889,445
+"SHARE","toilta","Toileting","SHARE_Europe/GH_SHARE_g.dta","r2toilta","r4toilta","r2toilta:w2 R Some Diff-Using the toilet","difficulty",12560,5960,553,350
+"CHARLS","batha","Bathing","CHARLS_China/H_CHARLS_D_Data.dta","r3batha","r4batha","r3batha:w3 r Some Diff-Bathing, shower","difficulty",4012,3399,570,597
+"CHARLS","dressa","Dressing","CHARLS_China/H_CHARLS_D_Data.dta","r3dressa","r4dressa","r3dressa:w3 r Some Diff-Dressing","difficulty",4021,3399,438,479
+"CHARLS","eata","Eating","CHARLS_China/H_CHARLS_D_Data.dta","r3eata","r4eata","r3eata:w3 r Some Diff-Eating","difficulty",4021,3399,187,205
+"CHARLS","beda","Getting in or out of bed","CHARLS_China/H_CHARLS_D_Data.dta","r3beda","r4beda","r3beda:w3 r Some Diff-Get in/out bed","difficulty",4020,3399,516,486
+"CHARLS","toilta","Toileting","CHARLS_China/H_CHARLS_D_Data.dta","r3toilta","r4toilta","r3toilta:w3 r Some Diff-Using the toilet","difficulty",4021,3399,963,760
+"MHAS","batha","Bathing","MHAS_Mexico/H_MHAS_d.dta","r5batha","r6batha","r5batha: w5 R Some difficulty-Bathing or showering","difficulty",5824,4718,440,586
+"MHAS","dressa","Dressing","MHAS_Mexico/H_MHAS_d.dta","r5dressa","r6dressa","r5dressa: w5 R Some difficulty-Dressing","difficulty",5825,4722,993,973
+"MHAS","eata","Eating","MHAS_Mexico/H_MHAS_d.dta","r5eata","r6eata","r5eata: w5 R Some difficulty-Eating","difficulty",5822,4716,184,300
+"MHAS","beda","Getting in or out of bed","MHAS_Mexico/H_MHAS_d.dta","r5beda","r6beda","r5beda: w5 R Some difficulty-Getting in/out of bed","difficulty",5823,4722,582,714
+"MHAS","toilta","Toileting","MHAS_Mexico/H_MHAS_d.dta","r5toilta","r6toilta","r5toilta: w5 R Some difficulty-Using the toilet","difficulty",5817,4708,515,609

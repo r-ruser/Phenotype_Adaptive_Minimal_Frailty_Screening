@@ -1,0 +1,226 @@
+"country","status","stage","Freq"
+"Austria","Country absent from wave","Common-score requirement",0
+"Belgium","Country absent from wave","Common-score requirement",0
+"Czech Republic","Country absent from wave","Common-score requirement",0
+"Denmark","Country absent from wave","Common-score requirement",0
+"France","Country absent from wave","Common-score requirement",0
+"Germany","Country absent from wave","Common-score requirement",0
+"Greece","Country absent from wave","Common-score requirement",2
+"Ireland","Country absent from wave","Common-score requirement",0
+"Israel","Country absent from wave","Common-score requirement",1
+"Italy","Country absent from wave","Common-score requirement",0
+"Netherlands","Country absent from wave","Common-score requirement",0
+"Poland","Country absent from wave","Common-score requirement",0
+"Spain","Country absent from wave","Common-score requirement",0
+"Sweden","Country absent from wave","Common-score requirement",0
+"Switzerland","Country absent from wave","Common-score requirement",0
+"Austria","Nonrespondent alive","Common-score requirement",0
+"Belgium","Nonrespondent alive","Common-score requirement",0
+"Czech Republic","Nonrespondent alive","Common-score requirement",0
+"Denmark","Nonrespondent alive","Common-score requirement",0
+"France","Nonrespondent alive","Common-score requirement",0
+"Germany","Nonrespondent alive","Common-score requirement",0
+"Greece","Nonrespondent alive","Common-score requirement",0
+"Ireland","Nonrespondent alive","Common-score requirement",0
+"Israel","Nonrespondent alive","Common-score requirement",2
+"Italy","Nonrespondent alive","Common-score requirement",0
+"Netherlands","Nonrespondent alive","Common-score requirement",0
+"Poland","Nonrespondent alive","Common-score requirement",0
+"Spain","Nonrespondent alive","Common-score requirement",0
+"Sweden","Nonrespondent alive","Common-score requirement",1
+"Switzerland","Nonrespondent alive","Common-score requirement",0
+"Austria","Recorded death","Common-score requirement",0
+"Belgium","Recorded death","Common-score requirement",0
+"Czech Republic","Recorded death","Common-score requirement",0
+"Denmark","Recorded death","Common-score requirement",0
+"France","Recorded death","Common-score requirement",0
+"Germany","Recorded death","Common-score requirement",0
+"Greece","Recorded death","Common-score requirement",1
+"Ireland","Recorded death","Common-score requirement",0
+"Israel","Recorded death","Common-score requirement",0
+"Italy","Recorded death","Common-score requirement",0
+"Netherlands","Recorded death","Common-score requirement",0
+"Poland","Recorded death","Common-score requirement",0
+"Spain","Recorded death","Common-score requirement",0
+"Sweden","Recorded death","Common-score requirement",0
+"Switzerland","Recorded death","Common-score requirement",0
+"Austria","Respondent alive","Common-score requirement",0
+"Belgium","Respondent alive","Common-score requirement",0
+"Czech Republic","Respondent alive","Common-score requirement",0
+"Denmark","Respondent alive","Common-score requirement",0
+"France","Respondent alive","Common-score requirement",0
+"Germany","Respondent alive","Common-score requirement",0
+"Greece","Respondent alive","Common-score requirement",0
+"Ireland","Respondent alive","Common-score requirement",0
+"Israel","Respondent alive","Common-score requirement",0
+"Italy","Respondent alive","Common-score requirement",0
+"Netherlands","Respondent alive","Common-score requirement",0
+"Poland","Respondent alive","Common-score requirement",1
+"Spain","Respondent alive","Common-score requirement",0
+"Sweden","Respondent alive","Common-score requirement",0
+"Switzerland","Respondent alive","Common-score requirement",0
+"Austria","Unknown vital status","Common-score requirement",0
+"Belgium","Unknown vital status","Common-score requirement",0
+"Czech Republic","Unknown vital status","Common-score requirement",0
+"Denmark","Unknown vital status","Common-score requirement",0
+"France","Unknown vital status","Common-score requirement",0
+"Germany","Unknown vital status","Common-score requirement",0
+"Greece","Unknown vital status","Common-score requirement",0
+"Ireland","Unknown vital status","Common-score requirement",0
+"Israel","Unknown vital status","Common-score requirement",0
+"Italy","Unknown vital status","Common-score requirement",0
+"Netherlands","Unknown vital status","Common-score requirement",0
+"Poland","Unknown vital status","Common-score requirement",0
+"Spain","Unknown vital status","Common-score requirement",0
+"Sweden","Unknown vital status","Common-score requirement",0
+"Switzerland","Unknown vital status","Common-score requirement",0
+"Austria","Country absent from wave","Follow-up FI unavailable",0
+"Belgium","Country absent from wave","Follow-up FI unavailable",0
+"Czech Republic","Country absent from wave","Follow-up FI unavailable",0
+"Denmark","Country absent from wave","Follow-up FI unavailable",0
+"France","Country absent from wave","Follow-up FI unavailable",0
+"Germany","Country absent from wave","Follow-up FI unavailable",0
+"Greece","Country absent from wave","Follow-up FI unavailable",950
+"Ireland","Country absent from wave","Follow-up FI unavailable",246
+"Israel","Country absent from wave","Follow-up FI unavailable",138
+"Italy","Country absent from wave","Follow-up FI unavailable",0
+"Netherlands","Country absent from wave","Follow-up FI unavailable",0
+"Poland","Country absent from wave","Follow-up FI unavailable",0
+"Spain","Country absent from wave","Follow-up FI unavailable",0
+"Sweden","Country absent from wave","Follow-up FI unavailable",0
+"Switzerland","Country absent from wave","Follow-up FI unavailable",0
+"Austria","Nonrespondent alive","Follow-up FI unavailable",85
+"Belgium","Nonrespondent alive","Follow-up FI unavailable",206
+"Czech Republic","Nonrespondent alive","Follow-up FI unavailable",46
+"Denmark","Nonrespondent alive","Follow-up FI unavailable",164
+"France","Nonrespondent alive","Follow-up FI unavailable",148
+"Germany","Nonrespondent alive","Follow-up FI unavailable",215
+"Greece","Nonrespondent alive","Follow-up FI unavailable",0
+"Ireland","Nonrespondent alive","Follow-up FI unavailable",0
+"Israel","Nonrespondent alive","Follow-up FI unavailable",893
+"Italy","Nonrespondent alive","Follow-up FI unavailable",175
+"Netherlands","Nonrespondent alive","Follow-up FI unavailable",113
+"Poland","Nonrespondent alive","Follow-up FI unavailable",58
+"Spain","Nonrespondent alive","Follow-up FI unavailable",138
+"Sweden","Nonrespondent alive","Follow-up FI unavailable",221
+"Switzerland","Nonrespondent alive","Follow-up FI unavailable",40
+"Austria","Recorded death","Follow-up FI unavailable",74
+"Belgium","Recorded death","Follow-up FI unavailable",128
+"Czech Republic","Recorded death","Follow-up FI unavailable",107
+"Denmark","Recorded death","Follow-up FI unavailable",135
+"France","Recorded death","Follow-up FI unavailable",118
+"Germany","Recorded death","Follow-up FI unavailable",102
+"Greece","Recorded death","Follow-up FI unavailable",139
+"Ireland","Recorded death","Follow-up FI unavailable",27
+"Israel","Recorded death","Follow-up FI unavailable",12
+"Italy","Recorded death","Follow-up FI unavailable",127
+"Netherlands","Recorded death","Follow-up FI unavailable",84
+"Poland","Recorded death","Follow-up FI unavailable",159
+"Spain","Recorded death","Follow-up FI unavailable",173
+"Sweden","Recorded death","Follow-up FI unavailable",156
+"Switzerland","Recorded death","Follow-up FI unavailable",36
+"Austria","Respondent alive","Follow-up FI unavailable",2
+"Belgium","Respondent alive","Follow-up FI unavailable",12
+"Czech Republic","Respondent alive","Follow-up FI unavailable",3
+"Denmark","Respondent alive","Follow-up FI unavailable",7
+"France","Respondent alive","Follow-up FI unavailable",19
+"Germany","Respondent alive","Follow-up FI unavailable",6
+"Greece","Respondent alive","Follow-up FI unavailable",0
+"Ireland","Respondent alive","Follow-up FI unavailable",0
+"Israel","Respondent alive","Follow-up FI unavailable",0
+"Italy","Respondent alive","Follow-up FI unavailable",17
+"Netherlands","Respondent alive","Follow-up FI unavailable",2
+"Poland","Respondent alive","Follow-up FI unavailable",10
+"Spain","Respondent alive","Follow-up FI unavailable",38
+"Sweden","Respondent alive","Follow-up FI unavailable",8
+"Switzerland","Respondent alive","Follow-up FI unavailable",3
+"Austria","Unknown vital status","Follow-up FI unavailable",64
+"Belgium","Unknown vital status","Follow-up FI unavailable",41
+"Czech Republic","Unknown vital status","Follow-up FI unavailable",285
+"Denmark","Unknown vital status","Follow-up FI unavailable",9
+"France","Unknown vital status","Follow-up FI unavailable",95
+"Germany","Unknown vital status","Follow-up FI unavailable",139
+"Greece","Unknown vital status","Follow-up FI unavailable",0
+"Ireland","Unknown vital status","Follow-up FI unavailable",0
+"Israel","Unknown vital status","Follow-up FI unavailable",0
+"Italy","Unknown vital status","Follow-up FI unavailable",128
+"Netherlands","Unknown vital status","Follow-up FI unavailable",103
+"Poland","Unknown vital status","Follow-up FI unavailable",165
+"Spain","Unknown vital status","Follow-up FI unavailable",31
+"Sweden","Unknown vital status","Follow-up FI unavailable",44
+"Switzerland","Unknown vital status","Follow-up FI unavailable",57
+"Austria","Country absent from wave","Retained for follow-up FI",0
+"Belgium","Country absent from wave","Retained for follow-up FI",0
+"Czech Republic","Country absent from wave","Retained for follow-up FI",0
+"Denmark","Country absent from wave","Retained for follow-up FI",0
+"France","Country absent from wave","Retained for follow-up FI",0
+"Germany","Country absent from wave","Retained for follow-up FI",0
+"Greece","Country absent from wave","Retained for follow-up FI",0
+"Ireland","Country absent from wave","Retained for follow-up FI",0
+"Israel","Country absent from wave","Retained for follow-up FI",0
+"Italy","Country absent from wave","Retained for follow-up FI",0
+"Netherlands","Country absent from wave","Retained for follow-up FI",0
+"Poland","Country absent from wave","Retained for follow-up FI",0
+"Spain","Country absent from wave","Retained for follow-up FI",0
+"Sweden","Country absent from wave","Retained for follow-up FI",0
+"Switzerland","Country absent from wave","Retained for follow-up FI",0
+"Austria","Nonrespondent alive","Retained for follow-up FI",0
+"Belgium","Nonrespondent alive","Retained for follow-up FI",0
+"Czech Republic","Nonrespondent alive","Retained for follow-up FI",0
+"Denmark","Nonrespondent alive","Retained for follow-up FI",0
+"France","Nonrespondent alive","Retained for follow-up FI",0
+"Germany","Nonrespondent alive","Retained for follow-up FI",0
+"Greece","Nonrespondent alive","Retained for follow-up FI",0
+"Ireland","Nonrespondent alive","Retained for follow-up FI",0
+"Israel","Nonrespondent alive","Retained for follow-up FI",0
+"Italy","Nonrespondent alive","Retained for follow-up FI",0
+"Netherlands","Nonrespondent alive","Retained for follow-up FI",0
+"Poland","Nonrespondent alive","Retained for follow-up FI",0
+"Spain","Nonrespondent alive","Retained for follow-up FI",0
+"Sweden","Nonrespondent alive","Retained for follow-up FI",0
+"Switzerland","Nonrespondent alive","Retained for follow-up FI",0
+"Austria","Recorded death","Retained for follow-up FI",0
+"Belgium","Recorded death","Retained for follow-up FI",0
+"Czech Republic","Recorded death","Retained for follow-up FI",0
+"Denmark","Recorded death","Retained for follow-up FI",0
+"France","Recorded death","Retained for follow-up FI",0
+"Germany","Recorded death","Retained for follow-up FI",0
+"Greece","Recorded death","Retained for follow-up FI",0
+"Ireland","Recorded death","Retained for follow-up FI",0
+"Israel","Recorded death","Retained for follow-up FI",0
+"Italy","Recorded death","Retained for follow-up FI",0
+"Netherlands","Recorded death","Retained for follow-up FI",0
+"Poland","Recorded death","Retained for follow-up FI",0
+"Spain","Recorded death","Retained for follow-up FI",0
+"Sweden","Recorded death","Retained for follow-up FI",0
+"Switzerland","Recorded death","Retained for follow-up FI",0
+"Austria","Respondent alive","Retained for follow-up FI",240
+"Belgium","Respondent alive","Retained for follow-up FI",701
+"Czech Republic","Respondent alive","Retained for follow-up FI",381
+"Denmark","Respondent alive","Retained for follow-up FI",487
+"France","Respondent alive","Retained for follow-up FI",605
+"Germany","Respondent alive","Retained for follow-up FI",440
+"Greece","Respondent alive","Retained for follow-up FI",0
+"Ireland","Respondent alive","Retained for follow-up FI",0
+"Israel","Respondent alive","Retained for follow-up FI",0
+"Italy","Respondent alive","Retained for follow-up FI",743
+"Netherlands","Respondent alive","Retained for follow-up FI",415
+"Poland","Respondent alive","Retained for follow-up FI",413
+"Spain","Respondent alive","Retained for follow-up FI",640
+"Sweden","Respondent alive","Retained for follow-up FI",516
+"Switzerland","Respondent alive","Retained for follow-up FI",270
+"Austria","Unknown vital status","Retained for follow-up FI",0
+"Belgium","Unknown vital status","Retained for follow-up FI",0
+"Czech Republic","Unknown vital status","Retained for follow-up FI",0
+"Denmark","Unknown vital status","Retained for follow-up FI",0
+"France","Unknown vital status","Retained for follow-up FI",0
+"Germany","Unknown vital status","Retained for follow-up FI",0
+"Greece","Unknown vital status","Retained for follow-up FI",0
+"Ireland","Unknown vital status","Retained for follow-up FI",0
+"Israel","Unknown vital status","Retained for follow-up FI",0
+"Italy","Unknown vital status","Retained for follow-up FI",0
+"Netherlands","Unknown vital status","Retained for follow-up FI",0
+"Poland","Unknown vital status","Retained for follow-up FI",0
+"Spain","Unknown vital status","Retained for follow-up FI",0
+"Sweden","Unknown vital status","Retained for follow-up FI",0
+"Switzerland","Unknown vital status","Retained for follow-up FI",0
