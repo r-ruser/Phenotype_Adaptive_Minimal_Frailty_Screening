@@ -17,4 +17,6 @@
 "14_SHARE_country_source.R",TRUE
 "15_attrition_IPW.R",TRUE
 "16_shared_five_ADL_sensitivity.R",TRUE
+"17_draw_confusion_matrix.R",TRUE
+"18_draw_framework.R",TRUE
 "score_FI6.R",TRUE

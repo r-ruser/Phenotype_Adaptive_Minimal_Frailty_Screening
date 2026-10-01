@@ -53,3 +53,5 @@ The first two preparation stages were numerically verified against frozen analys
 No participant data are included in this public package. Intermediate RDS files and the participant risk-set CSV created during local analysis belong to the private runtime directory.
 
 ## Additional result documentation
+
+Figures S1 and 1 are reproduced with `17_draw_confusion_matrix.R` and `18_draw_framework.R`, using the supplied aggregate classification table and explicit node/edge specification. The framework script also uses `systemfonts`. These drawing scripts and the benchmark drawing script were executed in a separate runtime during revision packaging.

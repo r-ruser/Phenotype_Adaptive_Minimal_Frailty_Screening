@@ -17,6 +17,8 @@
 "code/14_SHARE_country_source.R",1836
 "code/15_attrition_IPW.R",15451
 "code/16_shared_five_ADL_sensitivity.R",5230
+"code/17_draw_confusion_matrix.R",9362
+"code/18_draw_framework.R",16032
 "code/score_FI6.R",751
 "documentation/attrition_scope.md",1802
 "documentation/attrition_sensitivity.md",7965
@@ -36,7 +38,7 @@
 "mappings/reference_item_mapping_all_audited.csv",86093
 "mappings/source_dataset_labels.csv",561
 "mappings/special_missing_codes.csv",2013
-"README.md",5920
+"README.md",6268
 "results/actual_wave_years.csv",437
 "results/approximation/Bland_Altman_binned_source.csv",197150
 "results/approximation/FI6_continuous_agreement.csv",3449
@@ -118,4 +120,4 @@
 "results/reference_coverage.csv",591
 "results/reference_item_quality.csv",26259
 "results/reference_summary.csv",555
-"results/revision_code_syntax_QA.csv",584
+"results/revision_code_syntax_QA.csv",647
