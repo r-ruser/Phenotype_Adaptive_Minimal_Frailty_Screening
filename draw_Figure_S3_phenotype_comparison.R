@@ -8,7 +8,7 @@ source(file.path(code_dir,"00_config.R"),encoding="UTF-8")
 suppressPackageStartupMessages({library(ggplot2);library(patchwork);library(ragg);library(svglite)})
 out<-file.path(publication_dir,"figures");paired<-read.csv(file.path(score_source,"FI_universal_vs_phenotype.csv"))
 th<-theme_classic(base_size=10,base_family="Arial")
-save3<-function(fig,stem,w,h){ggsave(file.path(out,paste0(stem,".png")),fig,width=w,height=h,dpi=600,device=ragg::agg_png,bg="white");ggsave(file.path(out,paste0(stem,".svg")),fig,width=w,height=h,device=svglite::svglite,bg="white")}
+save3<-function(fig,stem,w,h){ggsave(file.path(out,paste0(stem,".png")),fig,width=w,height=h,dpi=600,device=ragg::agg_png,bg="white");ggsave(file.path(out,paste0(stem,".svg")),fig,width=w,height=h,device=svglite::svglite,bg="white");ggsave(file.path(out,paste0(stem,".tiff")),fig,width=w,height=h,dpi=600,device=ragg::agg_tiff,compression="lzw",bg="white")}
 z<-paired[paired$comparison=="Phenotype_minus_Universal"&paired$k==6,]
 z$cohort<-factor(z$cohort,levels=rev(c("HRS","ELSA","SHARE","CHARLS","MHAS")))
 z$outcome<-factor(z$outcome,levels=c("concurrent","followup_frail","incident_adl"),labels=c("Concurrent full-FI frailty","Follow-up FI frailty","Incident ADL limitation"))

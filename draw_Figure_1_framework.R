@@ -38,10 +38,10 @@ nodes <- data.frame(
     "Five ageing cohorts | HRS, ELSA, SHARE, CHARLS, MHAS | N = 34,954",
     "Baseline inputs | Complete FI: 39-50 deficits, FI >= 0.25 | Shared bank: 16 questions",
     "Leave-one-cohort-out | 4 training cohorts + 1 held-out cohort | Repeat across 5 outer folds",
-    "Four-cohort training only | 3 inner folds; six-item FI-scale mapping",
+    "Four-cohort training only | 3 inner folds; FI-scale mapping at k=1–16",
     "Universal ranking (primary) | XGBoost for complete FI | Cross-fitted TreeSHAP | Rank 16 questions",
     "Phenotype ranking (secondary) | Training-only latent classes | Within-class TreeSHAP",
-    "Lock rankings, cutoffs and six-item mapping",
+    "Lock rankings, cutoffs and length-specific mappings",
     "Unweighted top-k scores | Mean of observed selected deficits | k = 1-16 | m >= ceiling(0.8k)",
     "One held-out cohort | Untouched during learning",
     "Apply locked scores | Assign trained classes for phenotype scores",
@@ -163,7 +163,7 @@ draw_figure <- function() {
 
   rect(.49, .727, .366, .114, palette["gold_light"], border = "#BDAC78")
   txt("Four-cohort training only", .49, .748, 8.7, "bold", palette["ink"], max_width = .338)
-  txt("3 inner folds; six-item FI-scale mapping", .49, .704, 7.2, max_width = .338)
+  txt("3 inner folds; FI-scale mapping at k=1–16", .49, .704, 7.2, max_width = .338)
 
   rect(.394, .556, .164, .176, palette["gold_light"], border = "#BDAC78")
   txt("Universal ranking\n(primary)", .394, .610, 7.65, "bold", palette["ink"], max_width = .146)
@@ -174,7 +174,7 @@ draw_figure <- function() {
   txt("Training-only classes\nWithin-class TreeSHAP\nRank 16 questions", .586, .530, 6.9, max_width = .146)
 
   rect(.49, .412, .366, .070, palette["gold"], border = "#BDAC78", radius_mm = 1)
-  txt("Lock ranks, cutoffs & six-item mapping", .49, .413, 7.65, "bold", palette["ink"], max_width = .340)
+  txt("Lock ranks, cutoffs & FI-scale mappings", .49, .413, 7.65, "bold", palette["ink"], max_width = .340)
 
   rect(.49, .257, .366, .159, palette["blue_light"])
   txt("Unweighted top-k scores", .49, .309, 8.2, "bold", palette["ink"], max_width = .338)
@@ -239,7 +239,7 @@ if (any(!qa$fits)) {
   stop("One or more labels exceed their planned text boxes.")
 }
 legend <- paste0(
- "Figure 1. Five-cohort item-reduction framework. The study included 34,954 adults aged ≥65 years with at least one of hypertension, diabetes, heart disease, cancer, stroke, or arthritis. Each outer fold used four cohorts for learning and one held-out cohort for evaluation. A shared bank contained 16 questions, and complete reference FIs contained 39–50 deficits (frailty threshold ≥0.25). Three inner folds supplied cross-fitted TreeSHAP rankings for the primary universal scores; training-only latent classes supplied secondary phenotype rankings. Rankings, brief-score cutoffs, and six-item linear mappings were estimated in training and locked before held-out evaluation. Equal-weight top-k scores (k=1–16) required at least ceiling(0.8k) observed questions. Evaluation assessed concurrent FI discrimination and numerical agreement, follow-up FI frailty, and incident ADL limitation in baseline limitation-free participants, using common outcome-specific risk sets. Complete FI, simple correlation selection, and 1,000 random six-item combinations supplied benchmarks. Held-out length curves identified six items as an exploratory practical candidate. A further 500 coupled participant bootstraps repeated the primary universal training pipeline, including 7,500 XGBoost fits, ranking, mapping and cutoff estimation; duplicate participants stayed together within inner folds. Evaluation used original and jointly resampled held-out participants. The question bank and exploratory six-item length remained fixed during this resampling. Heterogeneity analyses compared FI distributions, diagnoses, functional limitations and candidate responses, quantified relative MAE/RMSE improvements and FI-stratified residual patterns, and decomposed MHAS bias at matched raw scores. Alt text: Three columns show cohort inputs, training-only score development and held-out evaluation. The lower modules show exploratory length trade-offs, primary training uncertainty and descriptive sources of heterogeneity."
+ "Figure 1. Five-cohort item-reduction framework. The study included 34,954 adults aged ≥65 years with at least one of hypertension, diabetes, heart disease, cancer, stroke, or arthritis. Each outer fold used four cohorts for learning and one held-out cohort for evaluation. A shared bank contained 16 questions, and complete reference FIs contained 39–50 deficits (frailty threshold ≥0.25). Three inner folds supplied cross-fitted TreeSHAP rankings for the primary universal scores; training-only latent classes supplied secondary phenotype rankings. Rankings, brief-score cutoffs, and length-specific linear mappings were estimated in training and locked before held-out evaluation. Equal-weight top-k scores (k=1–16) required at least ceiling(0.8k) observed questions. Evaluation assessed concurrent FI discrimination and numerical agreement, follow-up FI frailty, and incident ADL limitation in baseline limitation-free participants, using common outcome-specific risk sets. Complete FI, simple correlation selection, and 1,000 random six-item combinations supplied benchmarks. Held-out length curves identified six items as an exploratory practical candidate. A further 500 coupled participant bootstraps repeated the primary universal training pipeline, including 7,500 XGBoost fits, ranking, mapping and cutoff estimation; duplicate participants stayed together within inner folds. Evaluation used original and jointly resampled held-out participants. The question bank and exploratory six-item length remained fixed during this resampling. Heterogeneity analyses compared FI distributions, diagnoses, functional limitations and candidate responses, quantified relative MAE/RMSE improvements and FI-stratified residual patterns, and decomposed MHAS bias at matched raw scores. Alt text: Three columns show cohort inputs, training-only score development and held-out evaluation. The lower modules show exploratory length trade-offs, primary training uncertainty and descriptive sources of heterogeneity."
 )
 writeLines(legend, file.path(output_dir, "Figure_1_legend.txt"), useBytes = TRUE)
 writeLines(capture.output(sessionInfo()), file.path(output_dir, "R_sessionInfo.txt"), useBytes = TRUE)
