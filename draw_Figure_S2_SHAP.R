@@ -1,0 +1,42 @@
+if(.Platform$OS.type=="windows") invisible(try(Sys.setlocale("LC_ALL","Chinese (Simplified)_China.utf8"),silent=TRUE))
+options(stringsAsFactors=FALSE,warn=1)
+try(Sys.setlocale("LC_ALL","Chinese (Simplified)_China.utf8"),silent=TRUE)
+suppressPackageStartupMessages({library(ggplot2);library(ggbeeswarm);library(patchwork)})
+options(stringsAsFactors=FALSE)
+ms5_args <- commandArgs(FALSE)
+ms5_script <- sub("^--file=", "", ms5_args[grepl("^--file=",ms5_args)][1])
+code_dir <- Sys.getenv("MS5_CODE_DIR", unset=if(!is.na(ms5_script)) dirname(normalizePath(ms5_script,winslash="/",mustWork=TRUE)) else getwd())
+source(file.path(code_dir,"00_config.R"),encoding="UTF-8")
+
+out<-score_source
+bee<-read.csv(file.path(out,"FI_universal_SHAP_beeswarm_sample.csv"));st<-read.csv(file.path(out,"FI_item_stability.csv"));mat<-read.csv(file.path(out,"FI_item_stability_matrix.csv"))
+coh<-c("HRS","ELSA","SHARE","CHARLS","MHAS")
+all<-st[st$level=="phenotype_all",];all<-all[order(all$mean_rank),];top8<-all$item[1:8]
+item_names<-c(
+  armsa="Raise arms",batha="Bathe",beda="Get out of bed",chaira="Rise from chair",
+  climsa="Climb stairs",dimea="Pick up coin",dressa="Dress",eata="Eat",
+  lifta="Lift 10 lb",mealsa="Prepare meal",medsa="Take medicines",moneya="Manage money",
+  shlt="Self-rated health",shopa="Shop groceries",stoopa="Stoop/kneel",toilta="Use toilet")
+lab<-function(x)unname(item_names[sub("^q_","",x)])
+bee<-bee[bee$item%in%top8,];bee$held_out<-factor(bee$held_out,levels=coh,labels=paste("Held out",coh));bee$item<-factor(lab(bee$item),levels=rev(lab(top8)))
+base_theme<-theme_classic(base_size=9,base_family="Arial")+theme(plot.title=element_text(face="bold",size=11),strip.background=element_rect(fill="#F1F5F6",colour=NA),strip.text=element_text(face="bold",size=8),panel.grid.major.y=element_line(colour="#EEF1F2",linewidth=.22),axis.line=element_line(linewidth=.35),legend.key.height=grid::unit(1.4,"cm"))
+A<-ggplot(bee,aes(x=SHAP,y=item,colour=feature_value))+ggbeeswarm::geom_quasirandom(groupOnX=FALSE,width=.24,size=.34,alpha=.55,na.rm=TRUE)+facet_wrap(~held_out,nrow=2)+scale_colour_gradient(low="#457B9D",high="#D66D48",limits=c(0,1),na.value="#999999",name="Deficit value")+geom_vline(xintercept=0,colour="#707070",linewidth=.3)+labs(title=NULL,x="SHAP contribution to predicted complete FI",y=NULL)+base_theme+theme(legend.position="right")
+bars<-all[order(all$top5_fraction),];bars$item<-factor(lab(bars$item),levels=lab(bars$item))
+B<-ggplot(bars,aes(x=top5_fraction,y=item))+geom_col(fill="#176B8A",width=.7)+scale_x_continuous(limits=c(0,1),labels=function(x)paste0(round(x*100),"%"),expand=expansion(mult=c(0,.02)))+labs(title=NULL,x="Selection frequency",y=NULL)+base_theme+theme(axis.text.y=element_text(size=7))
+mat$fold_phenotype<-paste0(mat$held_out," P",mat$phenotype)
+ord<-unlist(lapply(coh,function(c)unique(mat$fold_phenotype[mat$held_out==c])))
+mat$fold_phenotype<-factor(mat$fold_phenotype,levels=ord)
+mat$item<-factor(lab(mat$item),levels=rev(lab(all$item)))
+C<-ggplot(mat,aes(x=fold_phenotype,y=item,fill=SHAP_rank))+geom_tile(colour="white",linewidth=.08)+scale_fill_gradient(low="#176B8A",high="#EFF2F3",limits=c(1,16),name="SHAP rank")+labs(title=NULL,x="Development phenotype; cohort named is held out",y=NULL)+base_theme+theme(axis.text.x=element_text(angle=90,vjust=.5,hjust=1,size=5.5),axis.text.y=element_text(size=7),legend.position="right")
+fig<-A/(B|C)+plot_layout(heights=c(1.55,1))
+ggsave(file.path(out,"Figure_S2_SHAP.pdf"),fig,width=16,height=13,units="in",device=cairo_pdf)
+ggsave(file.path(out,"Figure_S2_SHAP.png"),fig,width=16,height=13,units="in",dpi=300,device=ragg::agg_png)
+ggsave(file.path(out,"Figure_S2_SHAP.svg"),fig,width=16,height=13,units="in",device=svglite::svglite)
+barsj<-all[all$item%in%top8,];barsj<-barsj[order(barsj$top5_fraction),];barsj$item<-factor(lab(barsj$item),levels=lab(barsj$item))
+Bj<-ggplot(barsj,aes(x=top5_fraction,y=item))+geom_col(fill="#176B8A",width=.68)+scale_x_continuous(limits=c(0,1),labels=function(x)paste0(round(x*100),"%"),expand=expansion(mult=c(0,.02)))+labs(title=NULL,x="Selection frequency",y=NULL)+base_theme+theme(axis.text.y=element_text(size=8))
+Cj<-C+theme(axis.text.x=element_text(angle=90,vjust=.5,hjust=1,size=8),axis.text.y=element_text(size=8))
+figj<-A/Bj/Cj+plot_layout(heights=c(2.2,.9,1.7))+plot_annotation(tag_levels="a")
+ggsave(file.path(out,"Figure_S2_SHAP_JGMS.pdf"),figj,width=6.5,height=10.5,device=cairo_pdf,bg="white")
+ggsave(file.path(out,"Figure_S2_SHAP_JGMS.png"),figj,width=6.5,height=10.5,dpi=300,device=ragg::agg_png,bg="white")
+ggsave(file.path(out,"Figure_S2_SHAP_JGMS.svg"),figj,width=6.5,height=10.5,device=svglite::svglite,bg="white")
+cat("PASS: three-panel SHAP group figure with five-facet cross-fitted beeswarm, top-five frequency and 29-phenotype rank heatmap\n")
